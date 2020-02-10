@@ -8,8 +8,9 @@ Phase four custom theming support
 
 ## Buttons
 
-- ## Dropdown
-- ## Submit button
+- ## Button
+  - ## Dropdown
+  - ## Submit button
 
 ## Input Elements
 
