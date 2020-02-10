@@ -1,9 +1,6 @@
 import React from "react";
-import "./styles.css";
+import "./styles.scss";
 
 export default function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+  return <div className="App">this is test</div>;
 }
