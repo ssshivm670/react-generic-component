@@ -1,6 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./styles.scss";
-
+import ButtonComponent from "./Components/ButtonComponent/ButtonComponent";
 export default function App() {
-  return <div className="App">this is test</div>;
+  return (
+    <Fragment>
+      <ButtonComponent />
+    </Fragment>
+  );
 }
