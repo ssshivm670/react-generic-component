@@ -4,7 +4,7 @@ import ButtonComponent from "./Components/ButtonComponent/ButtonComponent";
 export default function App() {
   return (
     <Fragment>
-      <ButtonComponent />
+      <ButtonComponent onClick = {()=>{console.log(123);}} name={"123"}/>
     </Fragment>
   );
 }

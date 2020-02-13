@@ -6,16 +6,21 @@ import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
 describe("Testing button component", () => {
   let component;
-  
+  const setUp = ()=>{
+    const mockCallBack = jest.fn();
+    return shallow((<ButtonComponent name ="123" onClick={mockCallBack} />));
+  }
+
   it("Should render button component", () => {
-    component = shallow(<ButtonComponent />);
+    component =setUp();
     expect(component.exists());
   });
 
   it("Should simulate click", () => {
     const mockCallBack = jest.fn();
-    const button = shallow((<ButtonComponent onClick={mockCallBack} />));
-    button.simulate('click');
+    component = shallow((<ButtonComponent name ="123" onClick={mockCallBack} />));
+    component.find('button').simulate('click');
     expect(mockCallBack.mock.calls.length).toEqual(1);
   });
+
 });
